@@ -42,6 +42,6 @@ public class LibrarianTest {
                 () -> librarian.register("Another", "9999")
         );
 
-        assertEquals("Already registered", ex.getMessage());
+        assertEquals("Already registered.", ex.getMessage());
     }
 }
