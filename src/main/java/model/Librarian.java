@@ -14,7 +14,7 @@ public class Librarian {
 
     public void register(String name, String password) {
         if (this.name != null) {
-            throw new IllegalStateException("Already registered.");
+            throw new IllegalStateException("Already registered");
         }
 
         if (name == null || name.isBlank()) {
