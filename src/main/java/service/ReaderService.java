@@ -20,7 +20,7 @@ public class ReaderService {
     }
     public void registerReader(Reader reader) {
         if (readers.containsKey(reader.getId())) {
-            throw new IllegalArgumentException("Reader already exists");
+            throw new IllegalArgumentException("Reader with this ID already exists.");
         }
         readers.put(reader.getId(), reader);
     }
