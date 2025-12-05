@@ -13,7 +13,17 @@ public class Librarian {
     }
 
     public void register(String name, String password) {
-        if (this.name != null) throw new IllegalStateException("Already registered");
+        if (this.name != null) {
+            throw new IllegalStateException("Already registered.");
+        }
+
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Name cannot be empty.");
+        }
+
+        if (password == null || password.isBlank()) {
+            throw new IllegalArgumentException("Password cannot be empty.");
+        }
         this.name = name;
         this.password = password;
     }
